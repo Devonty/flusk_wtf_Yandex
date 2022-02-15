@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h1>Миссия Колонизация Марса</h1>
+
+{% endblock %}
+
+{% block content %}
+    <h4>И на Марсе будут яблони цвести!</h4>
+    {% if 'инженер' in prof.lower() or 'строитель' in prof.lower() %}
+        <h2>Инженерные тренажеры</h2>
+        <img src="\static\img\rocket_ingeneer.png">
+    {% else %}
+        <h2>Научные симуляторы</h2>
+        <img src="\static\img\rocket_another.png">
+    {% endif %}
+{% endblock %}
